@@ -31,7 +31,7 @@ let objarray1={
  let arr=second2(removed,objarray1[array1]);
  console.log("now arr is : ",arr);
 
- Promisesf(arr).then().catch();
+ Promisesf(arr);
  
 }
 

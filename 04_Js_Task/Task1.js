@@ -28,8 +28,7 @@ function main(){
  let arr=second(removed,array1);
  console.log("now arr is : ",arr);
 
- Promisef(arr).then()
- .catch();
+ Promisef(arr);
 
 
 }
