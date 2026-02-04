@@ -1,0 +1,7 @@
+<!-- <h1>APP LOADED</h1> -->
+
+@for (user of users(); track user.id) {
+  <app-user-card  [user]="user" (statusChanged)="onActiveChange($event)">
+  </app-user-card>
+}
+

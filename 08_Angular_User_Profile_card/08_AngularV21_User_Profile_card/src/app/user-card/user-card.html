@@ -1,0 +1,32 @@
+
+
+<mat-card [class.active]="user.isActive">
+
+  <div class="container">
+    
+  <mat-card-content class="card-content">
+    <mat-card-title> Name & Age :
+      {{ user.firstName }} {{ user.lastName }} ({{ user.age }})
+    </mat-card-title>
+    <img [src]="user.image" width="100" />
+
+    <mat-form-field appearance="outline">
+      <input
+        matInput
+        #nameInput
+        placeholder="Change Your Name"
+        [(ngModel)]="user.firstName" />
+
+        
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      (click)="toggleStatus()"
+      [disabled]="!user.firstName">
+      Toggle Status
+    </button>
+  </mat-card-content>
+
+  </div>
+</mat-card>

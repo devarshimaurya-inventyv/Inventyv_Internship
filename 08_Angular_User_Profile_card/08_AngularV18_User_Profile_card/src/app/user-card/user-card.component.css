@@ -1,0 +1,13 @@
+
+mat-card {
+  border: 5px solid red;
+  display: inline-block;
+  width: 280px;
+  vertical-align: top;
+  margin: 8px; 
+
+}
+
+mat-card.active {
+  border-color: green;
+}
