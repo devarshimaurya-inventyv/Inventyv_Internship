@@ -1,0 +1,14 @@
+  <div class="terminal" (click)="focusInput()">
+  <div *ngFor="let line of logs()">
+    {{ line }}
+  </div>
+
+  <div>
+   {{ pwd() }} :
+    <input
+      #cmdInput
+      type="text"
+      (keydown.enter)="func(cmdInput.value); cmdInput.value=''"
+    />
+  </div>
+</div>
