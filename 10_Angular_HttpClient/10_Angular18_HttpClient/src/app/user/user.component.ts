@@ -1,16 +1,16 @@
 import { Component, ChangeDetectorRef, inject } from '@angular/core';
-import { HttpService } from '../http-service';
+import { HttpServiceService } from '../http-service.service';
 import { CommonModule } from '@angular/common';
 import { NgZone } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Loadingservice } from '../loadingservice';
+import { LoadingserviceService } from '../loadingservice.service';
 
 @Component({
   selector: 'app-user',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './user.html',
-  styleUrl: './user.css',
+  templateUrl: './user.Component.html',
+  styleUrl: './user.component.css',
 })
 export class User {
   // users$: Observable<any[]>;
@@ -19,10 +19,10 @@ export class User {
   //   this.users$ = this.http.getUser();
   // }
   data: any[] = [];
-   loader = inject(Loadingservice);
+   loader = inject(LoadingserviceService);
 
   constructor(
-    private http: HttpService,
+    private http: HttpServiceService,
     private cdr: ChangeDetectorRef,
   ) {}
   ngOnInit() {

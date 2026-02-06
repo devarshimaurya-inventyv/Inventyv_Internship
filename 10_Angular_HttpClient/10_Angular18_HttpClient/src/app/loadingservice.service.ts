@@ -1,9 +1,9 @@
-import { Injectable , signal} from '@angular/core';
+import { Injectable ,signal } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class Loadingservice {
+export class LoadingserviceService {
    load = signal(false);
 
    show(){

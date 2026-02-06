@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class HttpService {
-  constructor(private http:HttpClient){}
+export class HttpServiceService {
+
+   constructor(private http:HttpClient){}
 
   getUser(){
     const url='https://jsonplaceholder.typicode.com/users';
     return this.http.get<any[]>(url);
   }
-
 }
