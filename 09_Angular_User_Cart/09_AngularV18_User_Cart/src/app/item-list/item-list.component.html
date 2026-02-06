@@ -1,0 +1,15 @@
+
+<div class="container">
+    <div>Items in Cart :{{ userCart.totalItems() }}</div>
+  <mat-card *ngFor="let product of productData">
+    <mat-card-title>{{ product.name }}</mat-card-title>
+    <mat-card-subtitle>{{ product.brand }}</mat-card-subtitle>
+    <mat-card-content>
+      <img [src]="product.image" alt="{{product.name}}" height="150px" width="150px">
+      <p>{{ product.description }}</p>
+    </mat-card-content>
+    <mat-card-footer>{{ product.price | currency }}</mat-card-footer>
+    <button (click)="addToCart(product)">+ Add</button>
+  </mat-card>
+
+</div>

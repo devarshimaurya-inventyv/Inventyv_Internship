@@ -1,0 +1,16 @@
+<p>User-cart works!</p>
+<h3>Your Cart</h3>
+
+<div class="scroll_container">
+  <div *ngFor="let item of userCart.items()">
+    <mat-card>
+      <div>{{ item.product.name }} {{ item.product.brand }} - Qty: {{ item.quantity }}</div>
+      <button (click)="userCart.increment(item.product)">+</button>
+      <button (click)="userCart.decrement(item.product)">-</button>
+      <button (click)="userCart.removeProduct(item.product)">Remove</button>
+    </mat-card>
+  </div>
+</div>
+
+<p>Total Items in Cart: {{ userCart.totalItems() }}</p>
+<p>Total Price : {{ userCart.totalPrice() }}</p>
