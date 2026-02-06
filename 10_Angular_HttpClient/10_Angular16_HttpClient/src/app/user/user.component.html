@@ -1,0 +1,21 @@
+<!-- <p>user works!</p>
+
+@if (loader.load()) {
+  <div class="loader">
+    Loading...
+  </div>
+}
+
+<div *ngFor="let x of data; trackBy: trackById">
+  name is : {{ x.name }}
+</div>  -->
+
+<p>user works!</p>
+
+<div *ngIf="loader.load()" class="loader">
+  Loading...
+</div>
+
+<div *ngFor="let x of data; trackBy: trackById">
+  name is : {{ x.name }}
+</div>
