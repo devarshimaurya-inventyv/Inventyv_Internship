@@ -1,0 +1,42 @@
+.nav {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  padding: 1rem 2rem;
+}
+
+.nav-right {
+  display: flex;
+  margin-left: auto; 
+}
+
+li {
+  margin: 0 .5rem;
+}
+
+* {
+  background-color: #05203C;
+  color: white;
+}
+
+
+p{
+    font-size: .9rem;
+}
+
+.brand h2 {
+  display: flex;          /* puts image + text in one line */
+  align-items: center;    /* vertical alignment */
+  gap: 8px;
+  margin: 0;
+}
+
+.brand img {
+  height: 1.2em;
+  width: auto;
+  display: block;         /* removes extra inline spacing */
+}
+
+.container{
+    text-align:left;
+}

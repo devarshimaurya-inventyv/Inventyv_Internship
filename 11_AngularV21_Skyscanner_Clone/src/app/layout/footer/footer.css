@@ -1,0 +1,19 @@
+.my-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color:#05203C ;
+    color: white;
+    padding: 2rem 2rem;
+}
+.mybtn{
+    background-color: lightblue
+}
+.mybtn:hover{
+    background-color: #ffffff1a;
+}
+ul{
+    list-style: none;  
+}
+li{
+    padding: .2rem;
+}

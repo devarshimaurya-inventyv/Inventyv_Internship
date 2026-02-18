@@ -1,0 +1,8 @@
+
+  .my-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card{
+    margin: 2rem 2rem;
+  }

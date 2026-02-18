@@ -1,0 +1,40 @@
+<div class="my-container">
+  <div class="img-container">
+    <img src="./assets/images/travel.jpeg" alt="travel" />
+  </div>
+
+  <section class="my-grid">
+    <h2>Booking flights with Skyscanner</h2>
+    <div class="grid-faq">
+      <!-- left column -->
+
+      <div class="faq-item" *ngFor="let item of leftfaq; let i = index">
+        <div class="faq-title" (click)="toggleleft(i)">
+          {{ item.title }} <span>{{ item.open ? '▲' : '▼' }}</span>
+        </div>
+
+        <div class="faq-content" *ngIf="item.open">
+            {{item.content}}
+        </div>
+
+
+
+      </div>
+
+      <!-- rightcoolm -->
+
+      
+      <div class="faq-item" *ngFor="let item of rightFaq; let i = index">
+        <div class="faq-title" (click)="toggleright(i)">
+          {{ item.title }} <span class="arrow">{{ item.open ? '▲' : '▼' }}</span>
+        </div>
+
+        <div class="faq-content" *ngIf="item.open">
+            {{item.content}}
+        </div>
+
+      </div>
+      
+    </div>
+  </section>
+</div>

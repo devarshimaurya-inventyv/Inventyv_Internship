@@ -1,0 +1,66 @@
+<div class="my-container">
+  <!-- <div> -->
+  <div *ngIf="!flightService.issearched">
+    <div class="my-dropdown">
+      <button class="my-dropdown-btn" (click)="toggle()">
+        {{ selected }}
+        <span class="arrow">▼</span>
+      </button>
+
+      <ul class="my-dropdown-menu" *ngIf="isOpen">
+        <li *ngFor="let option of options" (click)="select(option)">
+          {{ option }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="way">
+      <div *ngIf="selected === 'Oneway'">
+        <select [(ngModel)]="from">
+          <option *ngFor="let city of cities" [value]="city.code" [disabled]="city.code === to">
+            {{ city.name }}
+          </option>
+        </select>
+
+        <button id="swap" type="button" (click)="swapLocations()">⇄</button>
+
+        <select [(ngModel)]="to">
+          <option *ngFor="let city of cities" [value]="city.code" [disabled]="city.code === from">
+            {{ city.name }}
+          </option>
+        </select>
+
+        <label>Departure Date</label>
+        <input type="date" [value]="today" [(ngModel)]="depart" [min]="today" />
+        <button id="searchbtn" (click)="searchflight()">Search</button>
+      </div>
+
+      <div *ngIf="selected === 'Return'">
+        <select [(ngModel)]="from">
+          <option *ngFor="let city of cities" [value]="city.code" [disabled]="city.code === to">
+            {{ city.name }}
+          </option>
+        </select>
+
+        <select [(ngModel)]="to">
+          <option *ngFor="let city of cities" [value]="city.code" [disabled]="city.code === from">
+            {{ city.name }}
+          </option>
+        </select>
+
+        <label>Departure Date</label>
+        <input type="date" [(ngModel)]="depart" [min]="today" />
+
+        <label>Return Date</label>
+        <input type="date" [(ngModel)]="return" [min]="today || depart" />
+        <button id="searchbtn" (click)="searchflight()">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="searched" *ngIf="flightService.issearched">
+    <div class="showbanner">
+      from : {{ flightService.from }} To: {{ flightService.to }} Date: {{ flightService.depart }}
+    </div>
+  </div>
+</div>

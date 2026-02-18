@@ -1,0 +1,108 @@
+.my-dropdown {
+  position: relative;
+  width: 150px;
+}
+
+.my-dropdown-btn {
+  width: 100%;
+  font-size: .8rem;
+  padding: 0.6rem 1.2rem;
+  background: #05203C;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border:2px solid white;
+  border-radius: 9px;
+}
+
+.my-dropdown-menu {
+  position: absolute;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color:black
+}
+
+.dropdown-menu {
+  background: red;
+  position: static;
+}
+
+.dropdown-menu li {
+  padding: 0.6rem;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #f0f0f0;
+}
+
+.arrow {
+  float: right;
+}
+body {
+  margin: 8px;
+}
+.my-container{
+  background-color: #05203C;
+  padding-left: 7.5rem; 
+  padding-right: 7.5rem; 
+  padding-top: 1rem;
+  color: white;
+  padding-bottom: .1em;
+}
+
+#swap{
+  background-color: white;
+  margin:0 1rem;
+}
+
+.way select  {
+  margin:1rem 1rem;
+  width: 10rem;
+  appearance: none;
+  /* -webkit-appearance: none;
+  -moz-appearance: none; */
+  border: 2px solid white;
+  border-radius: 9px;
+}
+.way label {
+  margin:0rem  1rem;
+}
+
+.way input{
+   border: 2px solid white;
+  border-radius: 9px;
+}
+  #searchbtn{
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: #0062e3;
+    
+  font-size: .8rem;
+  padding: 1rem 1.2rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border:2px solid white;
+  border-radius: 9px;
+  }
+
+  .showbanner{
+    text-align: center;
+    background-color: #ffffff1a;
+    font-size: 1.5rem;
+    border-radius: 6px 6px;
+    margin-bottom: .8rem;
+  }
+
+  .my-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card{
+    margin: 2rem 2rem;
+  }

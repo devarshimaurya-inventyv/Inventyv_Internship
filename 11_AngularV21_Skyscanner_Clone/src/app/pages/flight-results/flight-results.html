@@ -1,0 +1,39 @@
+
+<app-header></app-header>
+<app-search-controller></app-search-controller>
+
+
+<div class="my-card">
+  <div *ngFor="let x of flights">
+    <div class="card text-center">
+      <div class="card-header">
+        <img [src]="x.airline_logo" alt="Airline Logo" class="airline-logo" />
+        <span> {{x.price}} $ </span>
+      </div>
+      <div class="card-body">
+        <!-- <h5 class="card-title">{{x.airline_logo}}</h5> -->
+        <p class="card-text">
+          {{ x.type }}
+        </p>
+
+        <div *ngFor="let leg of x.flights">
+          <p>
+            <strong>{{ leg.departure_airport.name }}</strong> →
+            <strong>{{ leg.arrival_airport.name }}</strong>
+          </p>
+          <p>Airline: {{ leg.airline }} ({{ leg.airplane }})</p>
+          <p>Time: {{ leg.departure_airport.time }} → {{ leg.arrival_airport.time }}</p>
+          <p>Class: {{ leg.travel_class }} | Legroom: {{ leg.legroom }}</p>
+          <ul>
+            <li *ngFor="let ext of leg.extensions">{{ ext }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer text-body-secondary">
+        Duration : {{ x.total_duration }} Min 
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
